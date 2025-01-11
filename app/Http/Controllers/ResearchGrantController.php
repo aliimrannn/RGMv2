@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ResearchGrant;
 use Illuminate\Http\Request;
 
 class ResearchGrantController extends Controller
@@ -11,8 +12,10 @@ class ResearchGrantController extends Controller
      */
     public function index()
     {
+        $researchGrants = ResearchGrant::all();
+
         $grants = ResearchGrant::with('leader')->get();
-        return view('research-grants.index', compact('grants'));
+        return view('research-grants.index', compact('researchGrants'));
     }
 
     /**

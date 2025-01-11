@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ProjectMilestone extends Model
+class Milestone extends Model
 {
     protected $primaryKey = 'MilestoneID';
 
