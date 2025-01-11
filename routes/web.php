@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ResearchGrantController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::resource('research-grants', ResearchGrantController);
+Route::resource('academians', AcademianController);
+Route::resource('milestones', ProjectMilestoneController);
